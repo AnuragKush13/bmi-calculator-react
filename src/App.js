@@ -1,5 +1,10 @@
 import './App.css';
 import {useState, useEffect} from 'react';
+import { Application } from '@splinetool/runtime';
+
+const canvas = document.getElementById('canvas3d');
+const app = new Application(canvas);
+app.load('https://prod.spline.design/3Ei9rbj5MRPrEZlY/scene.splinecode');
 
 function App() {
 
@@ -36,8 +41,7 @@ setCategory("Obesity");
 
   return (
     <div className="App">
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.17/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/3Ei9rbj5MRPrEZlY/scene.splinecode"></spline-viewer>
+   <div id = "canvas3d"></div>
       <div className ="container" >
         <h3>Calculate you BMI</h3>
       <p>Weight</p>
